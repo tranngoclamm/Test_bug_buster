@@ -40,6 +40,10 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'user' => [
+            'driver' => 'database',
+            'table' => 'users',
+        ],
     ],
 
     /*
@@ -65,12 +69,14 @@ return [
             'model' => App\Models\User::class,
         ],
 
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
-    ],
 
+    ],
+    'socialite'=> [
+        'drivers' => [
+            'google',
+        ],
+
+    ],
     /*
     |--------------------------------------------------------------------------
     | Resetting Passwords
